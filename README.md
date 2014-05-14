@@ -9,5 +9,11 @@ The modules whose names end with "-client" are command line applications that ca
 
 Modules with "forward-server" in the name exposes an HTTP service at http://localhost:8002/ that calls the service in the sleep-servers. The two parameters request, which influences how many requests are made, and replyAfterMillis, which is explained above, are used.
 
+## Building
+
+    mvn clean install
+
+## License
+
 Eclipse Public License.
 
