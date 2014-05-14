@@ -38,7 +38,7 @@ public class SleepServerApiClient {
 			final Callback<String> callback) throws Exception {
 		ListenableFuture<ResponseEntity<String>> response = client
 				.getForEntity(
-						"http://localhost:8001?replyAfterMillis={replyAfterMillis}",
+						"http://localhost:8002?replyAfterMillis={replyAfterMillis}",
 						String.class, replyAfterMillis);
 		response.addCallback(new ListenableFutureCallback<ResponseEntity<String>>() {
 			@Override

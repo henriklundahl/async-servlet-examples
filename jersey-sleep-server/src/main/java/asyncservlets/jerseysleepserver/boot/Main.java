@@ -1,7 +1,5 @@
 package asyncservlets.jerseysleepserver.boot;
 
-import static org.eclipse.jetty.servlet.ServletContextHandler.SESSIONS;
-
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
@@ -19,7 +17,7 @@ public class Main {
 
 		s.setConnectors(new Connector[] { createConnector(s) });
 
-		ServletContextHandler context = new ServletContextHandler(SESSIONS);
+		ServletContextHandler context = new ServletContextHandler();
 		context.setContextPath("/");
 		ServletHolder servletHolder = new ServletHolder(createJerseyServlet());
 		servletHolder.setInitOrder(1);

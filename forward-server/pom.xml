@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>async-servlets</groupId>
-	<artifactId>sleep-server</artifactId>
+	<artifactId>forward-server</artifactId>
 	<version>0.1.0-SNAPSHOT</version>
 
 	<properties>
@@ -11,6 +11,12 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>async-servlets</groupId>
+			<artifactId>asynchttpclient-client</artifactId>
+			<version>0.1.0-SNAPSHOT</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.eclipse.jetty.aggregate</groupId>
 			<artifactId>jetty-all</artifactId>
@@ -31,4 +37,3 @@
 		</plugins>
 	</build>
 </project>
-
