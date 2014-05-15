@@ -25,7 +25,7 @@ public class RootResource {
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public void root(@QueryParam("replyAfterMillis") long replyAfterMillis,
-			@Suspended final AsyncResponse response) throws Exception {
+			@Suspended final AsyncResponse response) {
 		System.out.println(pendingRequests.incrementAndGet());
 		final long before = System.currentTimeMillis();
 		if (replyAfterMillis <= 0)

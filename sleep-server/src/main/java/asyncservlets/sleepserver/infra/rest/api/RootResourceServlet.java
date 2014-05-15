@@ -1,6 +1,7 @@
 package asyncservlets.sleepserver.infra.rest.api;
 
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -34,8 +35,9 @@ public class RootResourceServlet extends HttpServlet {
 				long time = System.currentTimeMillis() - before;
 				ServletResponse response = context.getResponse();
 				response.setContentType("text/plain");
+				response.setCharacterEncoding("UTF-8");
 				byte[] entity = ("Replying after " + time + " milliseconds.\n")
-						.getBytes();
+						.getBytes(Charset.forName("UTF-8"));
 				response.setContentLength(entity.length);
 				try {
 					response.getOutputStream().write(entity);
